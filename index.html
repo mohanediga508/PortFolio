@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Portfolio Website</title>
+</head>
+<body>
+    <header>
+        
+        <div class="menu-button" onclick="toggleMenu()">☰</div>
+        <nav>
+            <a href="#home" class="active">Home</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#">Projects</a>
+            <a href="#">Certifications</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+    <section class="home" id="home">
+        <div class="home-img">
+            <img src="Photo.jpg" alt="profile photo">
+        </div>
+        <div class="home-content">
+            <h1>Hi, It's <span>Mohan Ediga</span></h1>
+            <h3 class="typing-text">I'm a <span>Software Developer</span></h3>
+            <p>Welcome to my portfolio! As a passionate and driven software developer,
+                 I'm eager to bring fresh perspectives and innovative solutions to the
+                  tech world. With a strong foundation in coding and a commitment to 
+                  continuous learning, I'm excited to contribute my skills to impactful 
+                  projects. Explore my work and see how my enthusiasm and creativity can
+                   add value to your next project."</p>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <div class="buttons">
+                <a href="#" class="btn">Hire me</a>
+                <a href="Mohan_Ediga_CV.pdf" download class="btn">Download CV</a>
+            </div>
+        </div>
+    </section>
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('active');
+        }
+    </script>
+        <section id="education" class="education-section">
+            <h2 class="section-title">Education</h2>
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3 class="degree">Bachelor of Technology in Computer Science</h3>
+                        <p class="institution">Siddharth institute of engineering and technology</p>
+                        <span class="timeline-date">2022 - 2025</span>
+                        <p class="description"> cgpa: 8.92 <br>Graduated with Honors, specialized in Software Development.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3 class="degree">Diploma</h3>
+                        <p class="institution">Government polytechnic Anantapur</p>
+                        <span class="timeline-date">2019 - 2012</span>
+                        <p class="description">Percantage: 92.7</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3 class="degree">SSC</h3>
+                        <p class="institution">Z P Hign School</p>
+                        <span class="timeline-date">2018- 2019</span>
+                        <p class="description"> cgpa: 9.5 </p>
+                    </div>
+                </div>
+                <!-- Add more timeline items as needed -->
+            </div>
+        </section>
+        <script>
+         document.addEventListener('DOMContentLoaded', function() {
+    const timelineItems = document.querySelectorAll('.timeline-item');
+
+    function animateOnScroll() {
+        const windowHeight = window.innerHeight;
+        timelineItems.forEach(item => {
+            const itemTop = item.getBoundingClientRect().top;
+            const itemBottom = item.getBoundingClientRect().bottom;
+
+            if (itemTop < windowHeight - 100 && itemBottom > 0) { // Adjust trigger point as needed
+                item.classList.add('show');
+                item.classList.remove('hide');
+            } else {
+                item.classList.remove('show');
+                item.classList.add('hide');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', animateOnScroll);
+    animateOnScroll(); // Initial check in case items are already in view
+});
+
+    </script>
+    <section class="skills-section" id="skills">
+        <div class="skills-container">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <img src="https://dev.java/assets/images/java-logo-vert-blk.png" alt="java">
+                </div>
+                <div class="skill-item">
+                    <img src="https://miro.medium.com/v2/resize:fit:700/1*3IcLSFuT8PQg4cUBaRXH1A.png" alt="python">
+                </div>
+                <div class="skill-item">
+                    <img src="https://e7.pngegg.com/pngimages/603/759/png-clipart-css3-cascading-style-sheets-logo-html-world-wide-web-blue-angle-thumbnail.png" alt="css">
+                </div>
+                <div class="skill-item">
+                    <img src="https://w7.pngwing.com/pngs/160/708/png-transparent-javascript-logo-javascript-logo-language-algorithm-app-3d-icon-thumbnail.png" alt="js">
+                </div>
+                <div class="skill-item">
+                    <img src="https://dev.java/assets/images/java-logo-vert-blk.png" alt="java">
+                </div>
+                <div class="skill-item">
+                    <img src="https://miro.medium.com/v2/resize:fit:700/1*3IcLSFuT8PQg4cUBaRXH1A.png" alt="python">
+                </div>
+                <!-- Add more skill items as needed -->
+            </div>
+        </div>
+    </section>
+    
+       
+
+</body>
+</html>
