@@ -172,27 +172,59 @@ section{
     background-color: #077b32;
     filter: drop-shadow(0 0 10px #077b32);
 }
-.content button{
-    width: 50%;
-    height: 6vh;
-    margin: 30px;
+.content button {
+    width: fit-content; /* Adjusts to button content */
+    min-width: 150px; /* Ensures it doesn’t shrink too much */
+    max-width: 200px; /* Prevents it from getting too large */
+    height: auto; /* Allow height to adjust dynamically */
+    padding: 12px 20px; /* Adjusts spacing */
+    margin: 20px;
     background-color: #077b32;
     color: white;
-    border: none;
+    border: 2px solid transparent;
     outline: none;
-    font-size: 120%;
+    font-size: 1.1rem;
     font-weight: 700;
-    border-radius: 5px;
-    transition: 0.2s linear;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    white-space: nowrap; /* Prevents text from breaking into two lines */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
-.content button:hover{
-    scale: 1.1;
+
+/* Fixing the <a> tag issue */
+.btn-container a {
+    text-decoration: none; /* Removes any unwanted blue underline */
+    color: inherit;
+    display: inline-flex; /* Ensures button remains inline */
+    align-items: center;
+    justify-content: center;
+}
+
+/* Button hover effect */
+.content button:hover {
+    transform: scale(1.1);
     color: #077b32;
     border: 2px solid #077b32;
     background-color: transparent;
-    font-weight: 700;
-    box-shadow: 0 0 40px #077b32;
+    box-shadow: 0 0 20px rgba(7, 123, 50, 0.8);
 }
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .btn-container {
+        flex-direction: column; /* Stack buttons on small screens */
+        gap: 10px;
+    }
+
+    .content button {
+        width: 100%; /* Full width on small screens */
+    }
+}
+
 
 .education-section {
     width: 100%;
@@ -474,7 +506,15 @@ section{
     border-radius: 50%;
     cursor: pointer;
     transition: background 0.3s ease-in-out;
+
+    /* Add these lines */
+    display: inline-block;
+    width: auto;  /* Ensures the button only takes necessary width */
+    height: auto; /* Ensures the height adjusts to content */
+    text-align: center; /* Centers the text inside the button */
+    line-height: normal; /* Avoids unwanted stretching */
 }
+
 
 .close-btn:hover {
     background: darkred;
@@ -576,6 +616,7 @@ section{
 }
 
 /* Popup Styling */
+/* Project Popup Styling */
 .project-popup {
     display: none;
     position: fixed;
@@ -584,58 +625,89 @@ section{
     top: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.9);
     justify-content: center;
     align-items: center;
 }
 
 .project-popup-content {
-    background: linear-gradient(145deg, #0b0b0b, #1a1a1a);
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 0 20px #077b32;
+    background: linear-gradient(145deg, #121212, #1e1e1e);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 25px #0fa74b;
     width: 60%;
-    max-height: 90vh;
+    max-height: 85vh;
     overflow-y: auto;
     text-align: center;
     color: white;
     position: relative;
-    animation: fadeIn 0.3s ease-in-out;
+    animation: fadeIn 0.4s ease-in-out;
 }
 
 /* Close Button */
 .close-popup {
     position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 30px;
+    top: 12px;
+    right: 20px;
+    font-size: 28px;
     cursor: pointer;
     color: white;
 }
 
 .close-popup:hover {
-    color: #077b32;
+    color: #0fa74b;
 }
 
-/* Slideshow */
+/* Title */
+.project-title {
+    font-size: 2rem;
+    color: #0fa74b;
+    margin-bottom: 15px;
+}
+
+/* Slideshow Styling */
 .slideshow-container {
     position: relative;
     width: 100%;
-    height: 250px;
+    max-height: 400px;
+    overflow: hidden;
 }
 
-.slideshow-container img {
+.slides {
+    display: none;
     width: 100%;
-    height: 250px;
+}
+
+.slides img {
+    width: 90%;
+    height: 400px;
     object-fit: cover;
     border-radius: 10px;
 }
 
-/* Languages and Description */
-.languages, .description {
-    font-size: 1rem;
-    margin: 10px 0;
+/* Languages & Skills */
+.skills-section1 {
+    background: #222;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.skills-section1 h3 {
+    color: #0fa74b;
+    font-size: 1.5rem;
+}
+
+.skills-section1 p {
+    font-size: 1.1rem;
     color: #ddd;
+}
+
+/* Description */
+.description {
+    font-size: 1.2rem;
+    margin: 15px 0;
+    color: #bbb;
 }
 
 /* Video */
@@ -654,9 +726,8 @@ section{
     margin-top: 15px;
 }
 
-.contributors p {
-    font-size: 1.1rem;
-    font-weight: bold;
+.contributors h3 {
+    font-size: 1.4rem;
     color: #0fa74b;
 }
 
@@ -674,6 +745,7 @@ section{
 .contributors a:hover {
     background: #077b32;
 }
+
 
 /* Animation */
 @keyframes fadeIn {
@@ -717,3 +789,119 @@ section{
         width: 90%;
     }
 }
+
+
+#contact {
+    padding: 50px;
+    color: white;
+    text-align: center;
+    background: black;
+}
+
+.contact-container {
+    max-width: 600px;
+    width: 90%;
+    margin: auto;
+    background: #1b1b1b;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px #077b32;
+    transition: 0.3s ease-in-out;
+}
+
+/* Toggle Button Container */
+.contact-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 15px;
+}
+
+/* Advanced Toggle Button */
+.toggle-container {
+    display: flex;
+    align-items: center;
+    background: #222;
+    border-radius: 30px;
+    padding: 5px;
+    box-shadow: inset 0 0 8px #077b32;
+}
+
+.toggle-btn {
+    width: 100px;
+    padding: 10px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    transition: 0.3s;
+    color: white;
+    user-select: none;
+}
+
+.toggle-btn.active {
+    background: #077b32;
+    color: black;
+    box-shadow: 0 0 10px #077b32;
+}
+
+/* Input Fields */
+input, textarea {
+    width: calc(100% - 20px);
+    padding: 12px;
+    border: 2px solid #077b32;
+    background: black;
+    color: white;
+    border-radius: 8px;
+    font-size: 17px;
+    transition: 0.3s;
+    outline: none;
+}
+
+input:focus, textarea:focus {
+    border-color: white;
+    box-shadow: 0 0 10px #077b32;
+}
+
+/* Textarea */
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+/* Submit Button */
+button {
+    background: #077b32;
+    color: white;
+    border: none;
+    padding: 14px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+}
+
+button:hover {
+    background: white;
+    color: #077b32;
+    box-shadow: 0 0 10px #077b32;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-container {
+        width: 90%;
+        padding: 20px;
+    }
+    .toggle-container {
+        flex-direction: row;
+        gap: 5px;
+    }
+    .toggle-btn {
+        width: 80px;
+        font-size: 14px;
+    }
+}
+
