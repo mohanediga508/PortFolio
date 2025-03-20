@@ -25,11 +25,11 @@
     </div>
         <div class="dropdown">
             <div class="links">
-                <a href="#main-container">Home</a>
-                <a href="#education-section">Education</a>
-                <a href="#">Skills</a>
-                <a href="#">Internships</a>
-                <a href="#">Projects</a>
+                <a href="#home">Home</a>
+                <a href="#education">Education</a>
+                <a href="#Skills">Skills</a>
+                <a href="#internships">Internships</a>
+                <a href="#projects">Projects</a>
                 <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
             </div>
         </div>
@@ -214,7 +214,7 @@
             <!-- Project 3 -->
             <div class="project-card" onclick="openPopup('project3')">
                 <img src="images/jobhub1.png" alt="Project 3">
-                <h3>Job Hub</h3>
+                <h3>Job Application portal</h3>
                 <button class="view-details" onclick="event.stopPropagation(); openPopup('project3')">View Details</button>
             </div>
         </div>
@@ -254,7 +254,13 @@
             </div>
             
             <!-- Project Description -->
-            <p class="description">A library management system designed to manage books, users, and borrowing history efficiently.</p>
+            <p class="description">
+                Our Library Management System is a full-stack web app designed for seamless book
+                 borrowing and management. Students can register, browse books, borrow/return them,
+                  and track their history, while admins handle book inventory, user management, and 
+                  issue tracking. Built with Java (Servlets, JSP), HTML, CSS, JavaScript, and MySQL,
+                   it ensures secure authentication and efficient operations. 
+            </p>
             
             <!-- Video -->
             <div class="video-container">
@@ -264,12 +270,16 @@
                 </video>
                 
              </div>
-            
+             <div class="github-link">
+                <a href="https://github.com/mohanediga508/LibraryManagementSystem" target="_blank" class="github-btn">
+                    View on GitHub
+                </a>
+            </div>
             <!-- Contributors -->
             <div class="contributors">
                 <h3>Contributors</h3>
-                <a href="https://www.linkedin.com/in/friend1" target="_blank">Friend 1</a>
-                <a href="https://www.linkedin.com/in/friend2" target="_blank">Friend 2</a>
+                <a href="https://www.linkedin.com/in/layavardhanreddy/" target="_blank">Laya vardan</a>
+                
             </div>
         </div>
     </div>
@@ -277,30 +287,68 @@
     <div id="project2" class="project-popup">
         <div class="project-popup-content">
             <span class="close-popup" onclick="closePopup('project2')">&times;</span>
-            <h2>Library Management System</h2>
+            
+            <!-- Project Title -->
+            <h2 class="project-title">Online Food Delivery</h2>
             
             <!-- Slideshow -->
             <div class="slideshow-container">
-                <img src="images/lms-image1.png" class="slide">
-                <img src="images/lms2.png" class="slide">
-                <img src="images/lms3.png" class="slide">
-                <img src="images/lms4.png" class="slide">
-                <img src="images/lms5.png" class="slide">
+                <div class="slides fade">
+                    <img src="images/foodSphere1.png" alt="Food Sphere">
+                </div>
+                <div class="slides fade">
+                    <img src="images/fs2.png" alt="Food Sphere">
+                </div>
+                <div class="slides fade">
+                    <img src="images/fs3.png" alt="Food Sphere">
+                </div>
+                <div class="slides fade">
+                    <img src="images/fs4.png" alt="Food Sphere">
+                </div>
+                <div class="slides fade">
+                    <img src="images/fs5.png" alt="Food Sphere">
+                </div>
+                <div class="slides fade">
+                    <img src="images/fs6.png" alt="Food Sphere">
+                </div>
             </div>
             
-            <p class="languages">Languages: HTML, CSS, Java, Jdbc, Servlets,Jsp , MySQL</p>
-            <p class="description">A library management system to manage books, users, and borrowing history efficiently.</p>
+            <!-- Languages & Skills -->
+            <div class="skills-section1">
+                <h3>Technologies Used</h3>
+                <p>HTML, CSS, Java, JDBC, Servlets, JSP, MySQL</p>
+            </div>
+            
+            <!-- Project Description -->
+            <p class="description">
+                Our Online Food Delivery Application serves both Users and Restaurant Owners for a seamless food
+                 ordering experience. Users can browse menus, apply filters, add dishes to the cart, provide an 
+                 address, and place orders, while restaurant owners can add, update, or remove dishes, manage orders,
+                  and analyze feedback and sales. Both users and restaurant owners can update their profiles for a
+                   personalized experience. Built with Java (Servlets, JSP, JDBC), HTML, CSS, JavaScript, and MySQL, 
+                   it ensures smooth and efficient operations.
+            </p>
             
             <!-- Video -->
             <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/examplevideo1" allowfullscreen></iframe>
+                <video controls width="100%">
+                    <source src="vedios/foodSphere.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                
+             </div>
+             <div class="github-link">
+                <a href="https://github.com/mohanediga508/FoodSphere" target="_blank" class="github-btn">
+                    View on GitHub
+                </a>
             </div>
-    
             <!-- Contributors -->
             <div class="contributors">
-                <p>Contributors:</p>
-                <a href="https://www.linkedin.com/in/friend1" target="_blank">Friend 1</a>
-                <a href="https://www.linkedin.com/in/friend2" target="_blank">Friend 2</a>
+                <h3>Contributors</h3>
+                <a href="https://www.linkedin.com/in/layavardhanreddy/" target="_blank">Laya vardan</a>
+                <a href="https://www.linkedin.com/in/kakuluripraveensaiyadav/" target="_blank">Praveen</a>
+                <a href="https://www.linkedin.com/in/reddyyaswanth/" target="_blank">Reddy Yashwanth</a>
+                
             </div>
         </div>
     </div>
@@ -308,27 +356,75 @@
     <div id="project3" class="project-popup">
         <div class="project-popup-content">
             <span class="close-popup" onclick="closePopup('project3')">&times;</span>
-            <h2>Library Management System</h2>
+            
+            <!-- Project Title -->
+            <h2 class="project-title">Job Appliation portal</h2>
             
             <!-- Slideshow -->
             <div class="slideshow-container">
-                <img src="project1-1.jpg" class="slide">
-                <img src="project1-2.jpg" class="slide">
+                <div class="slides fade">
+                    <img src="images/jobhub1.png" alt="job hub Screenshot">
+                </div>
+                <div class="slides fade">
+                    <img src="images/jobhub2.png" alt="job hub Screenshot ">
+                </div>
+                <div class="slides fade">
+                    <img src="images/jobhub3.png" alt="job hub Screenshot ">
+                </div>
+                <div class="slides fade">
+                    <img src="images/jobhub4.png" alt="job hub Screenshot">
+                </div>
+                <div class="slides fade">
+                    <img src="images/jobhub5.png" alt="job hub Screenshot">
+                </div>
+                <div class="slides fade">
+                    <img src="images/jobhub6.png" alt="job hub Screenshot">
+                </div>
+                <div class="slides fade">
+                    <img src="images/jobhub7.png" alt="job hub Screenshot">
+                </div>
             </div>
-    
-            <p class="languages">Languages: HTML, CSS, Java, MySQL</p>
-            <p class="description">A library management system to manage books, users, and borrowing history efficiently.</p>
+            
+            <!-- Languages & Skills -->
+            <div class="skills-section1">
+                <h3>Technologies Used</h3>
+                <p>React js, java , Spring , SpringBoot , MySQL</p>
+            </div>
+            
+            <!-- Project Description -->
+            <p class="description">
+                Job Hub is a web platform built with React and Spring Boot that connects both skilled and unskilled
+                 job seekers with employment opportunities. It focuses on underemployed individuals, part-time job seekers,
+                and those with limited formal education, bridging the gap left by conventional job portals. Users can search
+                for jobs by location and type, create profiles, and apply for positions, while employers can post, manage,
+                and review job applications. The platform emphasizes short-term, flexible, and non-professional jobs, such
+                as one-day or one-week assignments. Security and efficiency are enhanced using NLP, HmacSHA256, and 
+                BCryptPasswordEncoder for authentication and data protection 
+            </p>
             
             <!-- Video -->
             <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/examplevideo1" allowfullscreen></iframe>
+                <video controls width="100%">
+                    <source src="vedios/jobhub.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                
+             </div>
+             <div class="github-link">
+                <a href="https://github.com/JobHub-2024-MajorProject/JobHub_BackEnd" target="_blank" class="github-btn">
+                    View on GitHub back-end code
+                </a>
+                <a href="https://github.com/JobHub-2024-MajorProject/FronrEnd-New-repo" target="_blank" class="github-btn">
+                    View on GitHub front-end code
+                </a>
             </div>
-    
             <!-- Contributors -->
             <div class="contributors">
-                <p>Contributors:</p>
-                <a href="https://www.linkedin.com/in/friend1" target="_blank">Friend 1</a>
-                <a href="https://www.linkedin.com/in/friend2" target="_blank">Friend 2</a>
+                <h3>Contributors</h3>
+                <a href="https://www.linkedin.com/in/layavardhanreddy/" target="_blank">Laya vardan</a>
+                <a href="https://www.linkedin.com/in/kakuluripraveensaiyadav/" target="_blank">Praveen</a>
+                <a href="https://www.linkedin.com/in/reddyyaswanth/" target="_blank">Reddy Yashwanth</a>
+                <a href="https://www.linkedin.com/in/shaik-mahammad-ismail" target="_blank">Ismail</a>
             </div>
         </div>
     </div>
